@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhijit's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />-->
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap JS (with Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #1e90ff;
+      /* Hover color */
+    }
+
+    .navbar-scrolled {
+      background-color: #111;
+      /* Darker background on scroll */
+    }
+
+    .abhijit {
+      color: aqua;
+    }
+
+    #home {
+      background-color: #111;
+      color: white;
+    }
+
+    #home img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      /* To avoid extra space below the image */
+      margin-top: 30px;
+    }
+
+    .btn-primary {
+      background-color: #1e90ff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 24px;
+    }
+
+    .btn-primary:hover {
+      background-color: #007bff;
+    }
+
+    .typed-text {
+      white-space: nowrap;
+      /* Keeps text on one line if space allows */
+      font-size: inherit;
+      /* Inherits size from parent <h1> */
+      font-weight: inherit;
+    }
+
+    /* gallery */
+    /* Full-screen image styling */
+    /* Gallery image styling */
+    .gallery-img {
+      width: 50%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+      object-fit: cover;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: fadeIn 1s ease;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery-img {
+        width: 80%;
+      }
+    }
+
+    /* gallery */
+
+    @media (max-width: 576px) {
+      .typed-text {
+        font-size: 1.5rem;
+        /* Slightly smaller font on small screens */
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm" data-aos="fade-down">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">Abhijit Dutta</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#certification">Certifications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          
+            </ul>
+          </div>
+        </div>
+      </nav>
+       -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm" data-aos="fade-down">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Abhijit Dutta</a>
+      <!-- Hamburger Icon for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certification">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="d-flex align-items-center" style="min-height: 100vh; background-color: #111; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content (Left) -->
+        <div class="col-md-6">
+          <!-- <h1 class="display-4 fw-bold mb-4"><span class="abhijit">Hello, I'm <br></span><span id="element"></span>
+              </h1> -->
+
+          <h1 class="display-4 fw-bold mb-4">
+            <span class="abhijit">Hello, I'm <br></span>
+            <span id="element" class="typed-text"></span>
+          </h1>
+          <p class="lead">Welcome to my website. I'm passionate about technology and coding.</p>
+          <a href="resume.pdf" target="_blank" class="btn btn-primary btn-lg mt-3">
+            View Resume
+          </a>
+        </div>
+        <!-- Image (Right) -->
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+          <img src="MYPIC_PROFILE.jpg" alt="Abhijit" class="img-fluid rounded shadow"
+            style="width: 100%; max-width: 300px; height: auto;">
+          <!-- <img src="MYPIC_PROFILE.jpg" alt="Abhijit" class="rounded-circle shadow" style="width: 300px; height: 300px; object-fit: cover; object-position: center;"> -->
+
+          <!-- <img src="MYPIC_PROFILE.jpg" alt="Abhijit" class="img-fluid" style="max-width: 300px; margin-right: 5%;"> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="bg-light d-flex align-items-center" style="height: 100vh;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Profile Image -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="MYPIC_PROFILE.jpg" alt="Abhijit" class="img-fluid rounded shadow"
+            style="width: 100%; max-width: 300px; height: auto;">
+          <!-- <img src="MYPIC_PROFILE.jpg" alt="Abhijit Photo" class="img-fluid rounded-circle shadow" width="200" height="200"> -->
+        </div>
+        <!-- About Text -->
+        <div class="col-md-8">
+          <h2 class="fw-bold">About Me</h2>
+          <p class="text-muted">
+            Hello! I'm Abhijit, a Computer Science student passionate about web development, problem solving, and
+            emerging technologies like AI and quantum computing.
+          </p>
+          <p class="text-muted">
+            I enjoy working on real-world projects using HTML, CSS, JS, PHP, and exploring new tech. Currently building
+            my own programming language and a Li-Fi based system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-dark text-white d-flex align-items-center" style="height: 100vh;">
+    <div class="container text-center">
+      <h2 class="fw-bold display-5 mb-4">My Projects</h2>
+      <div class="row justify-content-center">
+        <!-- Project 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">Smart Home Automation</h5>
+              <p class="card-text">
+                IoT-based home automation system using sensors and mobile control.
+              </p>
+              <a href="" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- project-2. -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">CRUD Website</h5>
+              <p class="card-text">
+                A CRUD website allows users to create, read, update, and delete data through a simple interface.
+              </p>
+              <a href="https://github.com/abhiduttaa/CRUD_WEBSITE_USING_PHP" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3-->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">Banking Management System Using C</h5>
+              <p class="card-text">
+                A simple console-based banking system written in C. This program allows users to perform basic banking operations such as creating an account, viewing account details, depositing money, and withdrawing money.
+
+              </p>
+              <a href="https://github.com/abhiduttaa/Banking_management_system_Using_C" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 4-->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">College Website</h5>
+              <p class="card-text">
+                My College Website 
+              </p>
+              <a href="https://abhiduttaa.github.io/KPC-College-Website/" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">E-Commerce Website</h5>
+              <p class="card-text">
+                A responsive PHP + MySQL website for selling sarees and groceries.
+              </p>
+              <a href="#" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-secondary text-white h-100">
+            <div class="card-body">
+              <h5 class="card-title">Multipage Website</h5>
+              <p class="card-text">
+                A simple Multipage project
+              </p>
+              <a href="https://abhiduttaa.github.io/Multiple-page-college-website/" class="btn btn-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification Section -->
+  <!-- Certification Section -->
+  <section id="certification" class="bg-white text-dark d-flex align-items-center" style="min-height: 100vh;"
+    data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-4">📜 My Certifications</h2>
+      <div class="row justify-content-center">
+
+        <!-- Certificate 1 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">CSS Certification</h5>
+              <p class="card-text">Earned from HackerRank for mastering CSS fundamentals and layout design.</p>
+              <a href="https://www.linkedin.com/posts/abhijitdutta07_hackerrank-skill-certificate-activity-7250370633740509184-LVkL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEqxJGIBgQbvTZBW_XjFCmgpmG0NPaKcm7Q" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Certificate 2 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">C Certification</h5>
+              <p class="card-text">Earned from HackerRank for mastering CSS fundamentals and layout design.</p>
+              <a href="https://www.linkedin.com/posts/abhijitdutta07_im-excited-to-announce-that-ive-successfully-activity-7193899502016040961-SSJI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEqxJGIBgQbvTZBW_XjFCmgpmG0NPaKcm7Q" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Certificate 3-->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">JavaScript Certification</h5>
+              <p class="card-text">Earned from HackerRank for mastering CSS fundamentals and layout design.</p>
+              <a href="https://www.linkedin.com/posts/abhijitdutta07_html-project-activity-7162678491098927104-sjuD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEqxJGIBgQbvTZBW_XjFCmgpmG0NPaKcm7Q" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+        <!-- Certificate 4 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Java Certification</h5>
+              <p class="card-text">Earned from HackerRank for mastering CSS fundamentals and layout design.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 5 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Python</h5>
+              <p class="card-text">Completed hands-on training on data analysis using Python and pandas.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate 6 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Html,Css</h5>
+              <p class="card-text">
+                Completed a responsive website using HTML and CSS.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm" target="_blank">View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <!-- Gallery Section -->
+  <section id="gallery" class="bg-black text-white d-flex align-items-center" style="min-height: 100vh;"
+    data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-4">My Gallery</h2>
+      <div class="row justify-content-center">
+
+        <!-- Gallery Item 1 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Project Showcase</h5>
+              <p class="card-text">A snapshot from my IoT-based home automation system in action.</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Hackathon Day</h5>
+              <p class="card-text">Captured moment during the IEM Circuithon with my team.</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Tech Fest Memories</h5>
+              <p class="card-text">A moment from Bairab Ganguly College Tech Fest 2025.</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Workshop Snapshot</h5>
+              <p class="card-text">Participating in a Python Data Science workshop.</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">My Workstation</h5>
+              <p class="card-text">My personal setup where all coding magic happens!</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="350">
+          <div class="card bg-dark text-white border-0 shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">AbhijitLang Prototype</h5>
+              <p class="card-text">Preview of my custom programming language in development.</p>
+              <a href="#" class="btn btn-outline-light btn-sm" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section (Footer) -->
+
+  <section id="contact" class="bg-dark text-light d-flex align-items-center" style="min-height: 100vh;"
+    data-aos="fade-up">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-6 mb-5">
+          <h2 class="fw-bold mb-4">📞 Contact Me</h2>
+          <p><i class="bi bi-envelope-fill me-2 text-primary"></i> ad3052056@gmail.com</p>
+          <p><i class="bi bi-telephone-fill me-2 text-primary"></i> +91 987654321000</p>
+          <p><i class="bi bi-geo-alt-fill me-2 text-primary"></i> Santipur, West Bengal, India</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6 mb-5">
+          <h2 class="fw-bold mb-4">📬 Send a Message</h2>
+          <form action="https://api.web3forms.com/submit" method="POST" class="shadow p-4 rounded bg-light">
+            <input type="hidden" name="access_key" value="9f5089f3-b3ad-4461-bdd1-64157e938bdd">
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+            </div>
+            <div class="mb-3">
+              <textarea name="message" rows="4" class="form-control" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <p class="text-center mb-0">&copy; 2025 Abhijit. All rights reserved.</p>
+    </div>
+  </section>
+
+  <script>
+    // Change navbar color on scroll
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled");
+      } else {
+        navbar.classList.remove("navbar-scrolled");
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous">
+    </script>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+
+  <!-- .typejs. -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Abhijit ', 'Major in Computer Science ', ' Web Devoloper.'],
+      typeSpeed: 50,
+      loop: true,
+      loopCount: 10, // Repeat 10 times
+      backSpeed: 25,
+      backDelay: 1000,
+      smartBackspace: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  </script>
+
+
+
+  <!-- Bootstrap JS and Popper.js (for mobile toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+
+  <!-- Bootstrap JS Bundle (Make sure this is here) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Bootstrap and Popper.js JS (Make sure these are included for the navbar toggling) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha1/dist/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>
